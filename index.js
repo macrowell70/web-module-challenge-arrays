@@ -124,8 +124,8 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(array, index){
+  return array[index]
 }
 
 
@@ -144,8 +144,10 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(array, flavorName){
+  let index = array.indexOf(flavorName);
+  array.splice(index, 1);
+  return array
 }
 
 
@@ -169,10 +171,14 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(array, filterValue){
+  let newArray = []
+  for (let i = 0; i < array.length; i++) {
+  if (array[i].includes(filterValue)) {
+    newArray.push(array[i]);
+  }
+} return newArray
 }
-
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
